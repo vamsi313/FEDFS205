@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Arrays and Methods</title>
+</head>
+<body>
+    <h1>Javascript Arrays and Methods</h1>
+    <script>
+        document.write("<h2>Creating Arrays</h2>");
+        let fruits = ["Apple","Banana","Mango"];
+        document.write(typeof fruits);
+        document.write("Fruits: "+fruits+"<br><br>");
+
+        let value = [10,20,30,40,50];
+        console.table(value);
+
+        let mixed = ["fedf","205","c521a",{name:"sri"}];
+        document.write("Mixed values: "+ mixed + "<br><br>");
+        
+        //operations on existing array:push
+        document.write("<h2>push()-add element at the end</h2>");
+        fruits.push("orange");
+        document.write(fruits+"<br><br>");
+        
+        //to remove
+        document.write("<h2>pop()-remove the elements</h2>");
+        document.write("Removing the last element in the array:"+"<br><br>");
+        fruits.pop();
+        document.write(fruits+"<br><br>");
+
+        let mylist = fruits.toString();
+        document.write(mylist + "<br><br>");
+
+        document.write("<h2>shift() - Remove the first element </h2>");
+        fruits.shift();
+        document.write(fruits + "<br><br>");
+
+        document.write("<h2>concat()-Merge the arrays</h2>");
+        let morefruits = ["grapes","pineapple"];
+        let allfruits = fruits.concat(morefruits);
+        document.write(allfruits + "<br><br>");
+
+        document.write("<h2>slice()-extract a portion</h2>");
+        let sliced=allfruits.slice(1,3);
+        document.write(sliced +"<br><br>");
+
+        document.write("<h2>splice()-add remove elements</h2>");
+        allfruits.splice(2,1,"kiwi");
+        document.write(allfruits +"<br><br>");
+
+        allfruits.splice(4,1);
+        document.write(allfruits+"<br><br>");
+
+        allfruits.splice(-2,1);
+        document.write(allfruits+"<br><br>");
+
+        document.write("<h2>indexof() & lastindexof() </h2>");
+        let num = [1,2,3,2,4];
+        document.write("index(2): "+ num.indexOf(2)+"<br>");
+        document.write("lastindex(2): "+ num.lastIndexOf(2)+"<br>");
+
+        document.write("<h2>includes()</h2>");
+        document.write(fruits.includes("Apple")+"<br><br>");
+
+        document.write("<h2>forEach()</h2>");
+        num.forEach(function(num) {
+            document.write(num + 2 +" ");
+        });
+        document.write("<br><br>"); //forEach is called callback functiom(recurrsion)
+        
+    </script>
+</body>
+</html>
