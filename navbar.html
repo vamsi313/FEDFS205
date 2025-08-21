@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Demo</title>
+    <style>
+        .navbar{
+            display:flex;
+            background-color: orange;
+            justify-content: space-between;
+        }
+        .navbar .logo
+        {
+            flex:1;
+        }
+        .navbar .logo img{
+              height:40px;
+        }
+        .navbar .title{
+            flex:2;
+        }
+        
+    </style>
+</head>
+<body>   
+    <nav class="navbar">
+        <div class="logo">
+            <img src = "kl.jpeg">
+        </div>
+        <div class="title">
+            Learning Management System
+        </div>
+        <div class="links">
+            <a href="">Home</a>
+                <a href="">About us</a>
+                    <a href="">Signin/Signup</a>
+        </div>
+    </nav>
+</body>
+</html>
